@@ -15,6 +15,7 @@ type Props = {
     buy_per_share: number;
     target: number;
     company: string;
+    color: string;
   };
 };
 
@@ -23,11 +24,13 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const env_data = get_env_data();
   const buy = env_data.buy;
   let profit = "লাভ";
+  let color = "green"
   const sell = Math.floor(
     Number(env_data.stock) * Number(price) - Number(env_data.vat)
   );
   if (Number(buy) > Number(sell)) {
     profit = "লস";
+    color = 'red';
   }
   const data = {
     price: price,
@@ -39,6 +42,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     buy_per_share: env_data.buy_price,
     target: env_data.target,
     company: env_data.name,
+    color: color,
   };
 
   return {
@@ -58,7 +62,7 @@ export function Home({ data }: Props) {
       <main className={styles.main}>
         <h1 className={styles.title}>শেয়ার বাজার</h1>
 
-        <p className={styles.description}>
+        <p className={styles.description} style={{ color: data.color }} >
           বর্তমানে আমাদের শেয়ার 
           <b>
             {" "}
