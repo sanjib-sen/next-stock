@@ -68,8 +68,8 @@ export function Home({ data }: Props) {
           এ আছে
         </p>
         <h1 className={styles.card2}>
-          <Link href="/about">
-            <a>About Us</a>
+          <Link href="/">
+            <a>আবার চেক করো</a>
           </Link>
         </h1>
         <div className={styles.grid}>
