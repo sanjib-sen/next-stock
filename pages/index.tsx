@@ -60,17 +60,16 @@ export function Home({ data }: Props) {
         <h1 className={styles.title}>শেয়ার বাজার</h1>
 
         <p className={styles.description}>
-          বর্তমানে আমাদের শেয়ার{" "}
+          বর্তমানে আমাদের শেয়ার 
           <b>
             {" "}
-            {data.profit_money} টাকা {data.profit}{" "}
+            {data.profit_money} টাকা {data.profit}
           </b>{" "}
           এ আছে
         </p>
         <h1 className={styles.card2}>
-          <Link href="/">
-            <a>আবার চেক করো</a>
-          </Link>
+          <a href="https://next-stock.vercel.app">আবার চেক করো
+          </a>
         </h1>
         <div className={styles.grid}>
           <div className={styles.card}>

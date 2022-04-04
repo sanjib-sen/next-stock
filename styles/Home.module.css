@@ -42,8 +42,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 500px;
-  min-width: 500px;
+  max-width: 400px;
 }
 
 .card2 a {
@@ -100,8 +99,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 500px;
-  min-width: 500px;
+  max-width: 400px;
 }
 
 .card:hover,
