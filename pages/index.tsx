@@ -3,7 +3,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import get_stock from "../scripts/get-stock-price";
 import get_env_data from "../scripts/get-env-data";
-import Link from "next/link";
 
 type Props = {
   data: {
@@ -67,10 +66,11 @@ export function Home({ data }: Props) {
           </b>{" "}
           এ আছে
         </p>
+        <a href="https://next-stock.vercel.app">
         <h1 className={styles.card2}>
-          <a href="https://next-stock.vercel.app">আবার চেক করো
-          </a>
+         আবার চেক করো
         </h1>
+        </a>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>বর্তমান মুল্য প্রতি শেয়ারেঃ</h2>
@@ -100,12 +100,13 @@ export function Home({ data }: Props) {
                 {data.buy_per_share}
               </b>{" "}
               টাকা <br></br>
-              ৩। বিক্রি করা টার্গেট যখন প্রতি শেয়ারের মুল্য হবেঃ{" "}
-              <b>{data.target}</b> টাকা <br></br>
-              ৪। <b>{data.target}</b> টাকায় প্রতি শেয়ার বিক্রি করলে পাওয়া যাবে (
-              {data.stock} * {data.target} - ভ্যাট {data.vat} ) ={" "}
+              ৩। আমাদের টার্গেট বিক্রি করা, যখন প্রতি শেয়ারের মুল্য হবেঃ 
+              <b> {data.target}</b> টাকা <br></br>
+              ৪। <b>{data.target}</b> টাকায় প্রতি শেয়ার বিক্রি করলে পাওয়া যাবেঃ (
+              {data.stock} * {data.target} - ভ্যাট {data.vat} ) = {" "}
               <b>{(data.stock * data.target - data.vat).toLocaleString()}</b>{" "}
               টাকা <br></br>
+              ৫। ভ্যাট ধরা হয়েছেঃ <b>{data.vat}</b> টাকা
             </p>
           </div>
         </div>

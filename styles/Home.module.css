@@ -37,17 +37,12 @@
   margin: 1rem;
   padding: 1.5rem;
   text-align: center;
-  color: inherit;
+  color:#0070f3;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 5px solid #000000;
+  border-radius: 20px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 400px;
-}
-
-.card2 a {
-  color: #0070f3;
-  text-decoration: none;
 }
 
 .title a:hover,
@@ -102,17 +97,10 @@
   max-width: 400px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
 .card2:hover,
 .card2:focus,
 .card2:active {
-  color: #64f7f7;
+  color: #0070f3;
   border-color: #0070f3;
 }
 
