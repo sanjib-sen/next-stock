@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import get_stock from "../scripts/get-stock-price";
@@ -19,7 +19,7 @@ type Props = {
   };
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const price = await get_stock();
   const env_data = get_env_data();
   const buy = env_data.buy;
